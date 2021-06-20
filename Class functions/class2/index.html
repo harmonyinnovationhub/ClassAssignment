@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Who is Paying</title>
+</head>
+<body>
+	<h1>Randomly select a name in the array of names</h1>
+<script>
+	function whosPaying() {
+    var names= ["Abdul", "Peter", "Kenny", "John", "Moses"];
+    var numberOfPeople = names.length;
+    var randomPersonPosition = Math.floor(Math.random() * numberOfPeople);
+    var randomPerson = names[randomPersonPosition];
+    return randomPerson + " is going to buy lunch today!";
+}
+whosPaying();
+</script>
+</body>
+</html>

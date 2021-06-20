@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bottle of beer</title>
+</head>
+<body>
+	<h1>Bottles on the wall</h1>
+	<script>
+		var numberOfBottles = 99
+		while (numberOfBottles >= 0) {
+		    var bottleWord = "bottle";
+		    if (numberOfBottles === 1) {
+		        bottleWord = "bottles";
+		    } 
+		    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall");
+		    console.log(numberOfBottles + " " + bottleWord + " of beer,");
+		    console.log("Take one down, pass it around,");
+			numberOfBottles--;
+		    console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
+		}
+	</script>
+
+</body>
+</html>
