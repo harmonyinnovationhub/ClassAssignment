@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grayscale Color Picker</title>
+
+    <script>
+
+        function main() {
+
+            //var pickerButton = document.getElementById("grayscale_color_picker_button"); 
+            var pickerButton = document.grayscale_color_picker.grayscale_color_picker_button;
+
+            //pickerButton.onclick = pickerButtonClicked;  
+            pickerButton.addEventListener("click", pickerButtonClicked);
+        }
+
+        function pickerButtonClicked() {
+
+            //alert("Picker button clicked!"); 
+            //this.removeEventListener("click", pickerButtonClicked); 
+
+            var grayscaleColorLevel = document.grayscale_color_picker.grayscale_color_level.value;
+
+            if (grayscaleColorLevel < 0 || grayscaleColorLevel > 100) {
+                alert("Incorrect grayscale color level selected!");
+                return;
+            }
+
+            alert("User selected " + grayscaleColorLevel + "% of grayscale color level!");
+
+            var grayscaleColorSection = document.getElementById("grayscale_color_section");
+
+            grayscaleColorLevel = 100 - grayscaleColorLevel;
+
+            grayscaleColorSection.style.backgroundColor = "rgb(" + grayscaleColorLevel + "%,"
+                + grayscaleColorLevel + "%,"
+                + grayscaleColorLevel + "%)";
+        }
+
+    </script>
+
+    <style>
+        #grayscale_color_section {
+
+            border: 2px solid #000;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 50px;
+            background-color: rgb(50%, 50%, 50%);
+        }
+
+        form {
+            margin: 10px;
+        }
+
+        input[type=button] {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            font-size: 1.2em;
+            background-color: #fff;
+        }
+
+        label {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body onload="main()">
+    <h1>Grayscale Color Picker</h1>
+    <br />
+    <div id="grayscale_color_section"></div>
+    <br />
+    <form name="grayscale_color_picker">
+        <label>Select grayscale color level [%]: </label>
+        <input type="text" name="grayscale_color_level" value="50" />
+        <br />
+        <input type="button" name="grayscale_color_picker_button" id="grayscale_color_picker_button"
+            value="Set grayscale level!" />
+    </form>
+</body>
+
+</html>
