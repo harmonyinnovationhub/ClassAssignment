@@ -1,0 +1,26 @@
+<script>
+    function car() {
+        command = "";
+        command = prompt("> ").toLowerCase();
+        function drive() {
+            if (command == "start") {
+                console.log("The car is ignited.");
+            }
+            else if (command == "stop") {
+                console.log("The car is switched off");
+            }
+        }
+        drive();
+        function about() {
+            if (command == "help")
+                console.log(
+                    "Name: Toyota\n" +
+                    "Brand: Yaris\n" +
+                    "Model: 2008\n" +
+                    "Engine: 1.5 litre\n" +
+                    "Interior: 5 seated");
+        }
+        about();
+    }
+    car();
+</script>

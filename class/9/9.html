@@ -1,0 +1,32 @@
+<script>
+    function temp_converter() {
+        var temp = prompt("Enter your temperature");
+        unit = prompt("C(celcius) 0r F(fahrenheit)");
+        if (unit.toUpperCase() == "F") {
+            converted1 = (temp - 32) * 5 / 9;
+            console.log(converted1 + "  degree Celsius"); //corrected
+        }
+        else if (unit.toUpperCase() == "C") {
+            converted2 = (temp * (9 / 5)) + 32
+            console.log(converted2 + "  degree Fahrenheit");
+        }
+        else {
+            console.log("i don't understand");
+        }
+        function message() {
+            try {
+                if (converted1 > 30) {
+                    alert("It's a hot day, wear light clothes");
+                }
+                else if (converted1 < 24) {
+                    alert("It's a cold day, wear heavy clothing");
+                }
+            }
+            catch (e) {
+                alert(e);
+            }
+        }
+        message();
+    }
+    temp_converter();
+</script>

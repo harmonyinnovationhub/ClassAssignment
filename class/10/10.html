@@ -1,0 +1,17 @@
+<script>
+    function roster() {
+        var enter = prompt("Enter entry date and time" + '')
+        entry_time = new Date(enter)
+        var resume_time = new Date('June 21, 2021 09:00:00') // new
+        if (entry_time.getTime() > resume_time.getTime()) {
+            alert("Report to the HR for disciplinary actions")
+        }
+        else if (entry_time.getTime() < resume_time.getTime()) {
+            alert("Welcome to work, have a great day")
+        }
+        else {
+            console
+        }
+    }
+    roster();
+</script>

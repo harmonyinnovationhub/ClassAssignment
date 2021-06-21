@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    function weight_converter() {
+        weight = prompt("Enter your weight");
+        unit = prompt("L(bs) 0r K(g)");
+        res = unit.toUpperCase();
+        if (res == "L") {
+            converted = weight * 0.45;
+            console.log(converted + " kilos");
+        }
+        else if (res != "L") {
+            converted = weight / 0.45
+            console.log(converted + " pounds");
+        }
+        else{
+            console("Enter a unit!")
+        }
+    }
+    weight_converter();
+</script>

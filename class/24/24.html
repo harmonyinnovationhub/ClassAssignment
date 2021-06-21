@@ -1,0 +1,44 @@
+<script>
+    function todo() {
+        let choice1, choice2;
+
+        // function for adding task
+        function addTask() {
+            var task = [""]
+            var taskAdd = prompt("add task");
+            task.push(taskAdd);
+
+            var con = prompt("do you want to add another task; yes or No");
+
+            if (con == "yes") {
+                addTask();
+            } else {
+                for (let i in task) {
+                    console.log(task[i]);
+                }
+            }
+
+        }
+
+        // message that is asking of what you want to do
+        var choice = prompt("Do you want to add task? Enter yes or no")
+        choice1 = "yes";
+        choice2 = "no";
+
+        // condition on the choice made
+        if (choice == choice1) {
+            addTask();
+        } else if (choice == choice2) {
+            console.log("thank you for working with us");
+            for (let i in task) {
+                console.log(task[i]);
+            }
+
+        } else {
+            console.log("you have made an invalid choice");
+        }
+
+    }
+
+    todo();
+</script>

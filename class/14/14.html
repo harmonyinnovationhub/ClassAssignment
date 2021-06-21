@@ -1,0 +1,19 @@
+<script>
+    function guess_game() {
+        let secret_num = 9;
+        let guess_count = 0;
+        let guess_limit = 3;
+        while (guess_count < guess_limit) {
+            guess = prompt("Guess");
+            guess_count += 1;
+            if (guess == secret_num) {
+                console.log("you won");
+                break;
+            }
+            else if (guess != secret_num) {
+                console.log("you are wrong!!!, Try again");
+            }
+        }
+    }
+    guess_game();
+</script>

@@ -1,0 +1,32 @@
+<script>
+    function tellFortune() {
+        var ch_num = 4;
+        var lv_name_man = 'cole';
+        var lv_name_woman = 'ashley';
+        var geo_loc = 'nevada';
+        var job_title = 'Manager'
+        var gender = prompt("M(male) or F(female)");
+        if (gender.toUpperCase() == "M") {
+            var name = prompt("Enter name")
+            if (name == "joe") {
+                console.log("You'll get married to " + lv_name_woman + " and you'll have " + ch_num + "kids. You'll also become the " + job_title + " of your workplace")
+            }
+            else {
+                console.log("There is no fortune for you here!")
+            }
+        }
+        else if (gender.toUpperCase() == "F") {
+            var name = prompt("Enter name")
+            if (name == "joyce") {
+                console.log("You'll get married to " + lv_name_man + " and you'll have " + ch_num + "kids. You'll also become the " + job_title + " of your workplace")
+            }
+            else {
+                console.log("There is no fortune for you here!")
+            }
+        }
+        else {
+            console.log("Goodbye!")
+        }
+    }
+    tellFortune();
+</script>

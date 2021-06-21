@@ -1,0 +1,30 @@
+<script>
+    function car_game() {
+        command = "";
+        while (command.toLowerCase() != "quit") {
+            command = prompt("> ").toLowerCase();
+            if (command == "start") {
+                console.log("Car already started.");
+            }
+            else if (command == "stop") {
+                console.log("Car already stopped"); // ACCEPTED
+            }
+            else if (command == "help") {
+                // multiline string
+                console.log(
+                    "> start - To start the car\n" +
+                    "> stop - To stop the car\n" +
+                    "> Quit - To quit");
+
+            }
+            else if (command == "quit") {
+                break
+            }
+            else {
+                console.log("Sorry i don't understand");
+            }
+
+        }
+    }
+    car_game();
+</script>
