@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Even/Odd integer checker</title>
+
+    <script>
+
+        window.onload = main;
+
+        function main() {
+
+            var checkerButton = document.getElementById("checker_button");
+            checkerButton.onclick = checkerButtonClicked;
+        }
+
+        function checkerButtonClicked() {
+
+            var integerNumber = prompt("Please enter any integer number:",
+                0 /* default value */);
+            if (integerNumber != null) {
+
+                var isEven = testIfEven(integerNumber);
+
+                // alert(isEven); 
+
+                if (isEven) {
+                    document.getElementById("checker_output").innerHTML =
+                        "The input integer " + integerNumber + " is even";
+                    document.getElementById("checker_output").style.color = "green";
+                } else {
+                    document.getElementById("checker_output").innerHTML =
+                        "The input integer " + integerNumber + " is odd";
+                    document.getElementById("checker_output").style.color = "red";
+                }
+            } else {
+                document.getElementById("checker_output").innerHTML = "Error while parsing integer!";
+            }
+        }
+
+        function testIfOdd(integerNumber) {
+
+            return integerNumber % 2;
+        }
+
+        function testIfEven(integerNumber) {
+
+            return !testIfOdd(integerNumber);
+        }
+
+    </script>
+
+    <style>
+        h3 {
+            color: green;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Even/odd integer checker app</h3>
+    <button id="checker_button">Check integer</button>
+    <p id="checker_output"></p>
+
+</body>
+
+</html>
